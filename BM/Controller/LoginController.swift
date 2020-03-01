@@ -42,28 +42,58 @@ class LoginController: UIViewController {
        }()
     
     
+    private let loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Log In", for: .normal)
+        button.setTitleColor(UIColor(white: 1, alpha: 0.5), for: .normal)
+        button.backgroundColor = .mainBlueTintColor
+        button.layer.cornerRadius = 5
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        return button
+    }()
+    
+    let dontHaveAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        let attributedTitle = NSMutableAttributedString(string: "Don't have an account? ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
+             NSMutableAttributedString.Key.foregroundColor: UIColor.lightGray])
+        
+        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes:
+            [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16),
+             NSAttributedString.Key.foregroundColor: UIColor.mainBlueTintColor]))
+//        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        
+        return button
+    }()
+    
+    
     // Mark: - Lifecycle
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.init(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
+        view.backgroundColor = .backgroundColor
         
         
         view.addSubview(titleLabel)
         titleLabel.anchor(top:view.safeAreaLayoutGuide.topAnchor)
         titleLabel.centerX(inView: view)
         
-        let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView])
+        let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView,
+                                                        loginButton])
         stack.axis = .vertical
         stack.distribution = .fillEqually
-        stack.spacing = 16
+        stack.spacing = 24
         
         view.addSubview(stack)
         stack.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor,
                      paddingTop: 40, paddingLeft: 16, paddingRight: 16)
         
         
+        view.addSubview(dontHaveAccountButton)
+        dontHaveAccountButton.centerX(inView: view)
+        dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: 32)
  
     }
 

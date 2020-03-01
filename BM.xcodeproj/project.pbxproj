@@ -12,6 +12,7 @@
 		47F1E543240B31C1003B8117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F1E542240B31C1003B8117 /* Assets.xcassets */; };
 		47F1E546240B31C1003B8117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47F1E544240B31C1003B8117 /* LaunchScreen.storyboard */; };
 		47F1E554240B33AC003B8117 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F1E553240B33AC003B8117 /* LoginController.swift */; };
+		47F1E556240B4C2E003B8117 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F1E555240B4C2E003B8117 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		47F1E545240B31C1003B8117 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47F1E547240B31C1003B8117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47F1E553240B33AC003B8117 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		47F1E555240B4C2E003B8117 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,7 @@
 				47F1E551240B3247003B8117 /* View */,
 				47F1E550240B3241003B8117 /* Controller */,
 				47F1E54F240B323E003B8117 /* Service */,
-				47F1E54D240B322F003B8117 /* Utilities */,
+				47F1E54D240B322F003B8117 /* Utills */,
 				47F1E539240B31BA003B8117 /* AppDelegate.swift */,
 				47F1E53B240B31BA003B8117 /* SceneDelegate.swift */,
 				47F1E542240B31C1003B8117 /* Assets.xcassets */,
@@ -68,11 +70,12 @@
 			path = BM;
 			sourceTree = "<group>";
 		};
-		47F1E54D240B322F003B8117 /* Utilities */ = {
+		47F1E54D240B322F003B8117 /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				47F1E555240B4C2E003B8117 /* Extensions.swift */,
 			);
-			path = Utilities;
+			path = Utills;
 			sourceTree = "<group>";
 		};
 		47F1E54F240B323E003B8117 /* Service */ = {
@@ -177,6 +180,7 @@
 				47F1E53A240B31BA003B8117 /* AppDelegate.swift in Sources */,
 				47F1E554240B33AC003B8117 /* LoginController.swift in Sources */,
 				47F1E53C240B31BA003B8117 /* SceneDelegate.swift in Sources */,
+				47F1E556240B4C2E003B8117 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

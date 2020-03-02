@@ -42,14 +42,11 @@ class LoginController: UIViewController {
        }()
     
     
-    private let loginButton: UIButton = {
-        let button = UIButton(type: .system)
+    private let loginButton: AuthButton = {
+        let button = AuthButton(type: .system)
         button.setTitle("Log In", for: .normal)
-        button.setTitleColor(UIColor(white: 1, alpha: 0.5), for: .normal)
         button.backgroundColor = .mainBlueTintColor
-        button.layer.cornerRadius = 5
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         return button
     }()
     
@@ -60,8 +57,8 @@ class LoginController: UIViewController {
         
         attributedTitle.append(NSAttributedString(string: "Sign Up", attributes:
             [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16),
-             NSAttributedString.Key.foregroundColor: UIColor.mainBlueTintColor]))
-//        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+             NSAttributedString.Key.foregroundColor: UIColor.systemPink]))
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         button.setAttributedTitle(attributedTitle, for: .normal)
         
         return button
@@ -73,6 +70,24 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         configureUI()
+ 
+    }
+    
+
+    // Mark: - Selectors
+    
+    @objc func handleShowSignUp() {
+        let controller = SignUpController()
+        navigationController?.pushViewController(controller, animated: true)
+        
+    }
+    
+    //Marker:- Helper Functions
+    
+    func configureUI(){
+        configureNavigationBar()
+        
         view.backgroundColor = .backgroundColor
         
         
@@ -94,11 +109,11 @@ class LoginController: UIViewController {
         view.addSubview(dontHaveAccountButton)
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: 32)
- 
     }
-
-    override var preferredStatusBarStyle: UIStatusBarStyle{
-        return.lightContent
+    
+    func configureNavigationBar(){
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barStyle = .black
     }
 }
 

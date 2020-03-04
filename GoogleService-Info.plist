@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>76964751845-8k01mi8cr8um4uh03av8l9s5ga4d1bpk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.76964751845-8k01mi8cr8um4uh03av8l9s5ga4d1bpk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAoDPB6-ulMRjZ9xRrWfdFiNEEZwhAj_vc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>76964751845</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.bronzy.BM</string>
+	<key>PROJECT_ID</key>
+	<string>blackmarket-1ff5a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>blackmarket-1ff5a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:76964751845:ios:748996650573dd92d8670c</string>
+	<key>DATABASE_URL</key>
+	<string>https://blackmarket-1ff5a.firebaseio.com</string>
+</dict>
+</plist>

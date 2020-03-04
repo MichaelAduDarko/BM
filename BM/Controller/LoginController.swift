@@ -8,6 +8,7 @@
 
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
 
@@ -47,6 +48,7 @@ class LoginController: UIViewController {
         button.setTitle("Log In", for: .normal)
         button.backgroundColor = .mainBlueTintColor
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
@@ -76,6 +78,21 @@ class LoginController: UIViewController {
     
 
     // Mark: - Selectors
+    
+    @objc func handleLogin(){
+        guard let email = emailTextFeild.text else{ return }
+        guard let password = passwordTextFeild.text  else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("DEBUG: Failed to log user in with error \(error.localizedDescription)")
+                return
+            }
+            
+            print("Succefully loged in ...")
+        }
+        
+    }
     
     @objc func handleShowSignUp() {
         let controller = SignUpController()

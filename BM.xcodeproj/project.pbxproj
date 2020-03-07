@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472E2B38241349F300B96CDC /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E2B37241349F300B96CDC /* CategoryVC.swift */; };
+		472E2B3A24134A4700B96CDC /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E2B3924134A4700B96CDC /* ProfileVC.swift */; };
+		472E2B3C2413552700B96CDC /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E2B3B2413552700B96CDC /* AddItemVC.swift */; };
+		472E2B3E241355BF00B96CDC /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E2B3D241355BF00B96CDC /* ChatVC.swift */; };
 		474412A6240F5FD80041F830 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 474412A5240F5FD70041F830 /* GoogleService-Info.plist */; };
 		47C6272224133CA2003D268D /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6272124133C9F003D268D /* HomeController.swift */; };
 		47F1E53A240B31BA003B8117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F1E539240B31BA003B8117 /* AppDelegate.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		472E2B37241349F300B96CDC /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		472E2B3924134A4700B96CDC /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		472E2B3B2413552700B96CDC /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
+		472E2B3D241355BF00B96CDC /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		474412A5240F5FD70041F830 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		47C6272124133C9F003D268D /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		47F1E536240B31BA003B8117 /* BM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +124,10 @@
 				47F1E553240B33AC003B8117 /* LoginController.swift */,
 				47F1E557240CAB37003B8117 /* SignUpController.swift */,
 				47C6272124133C9F003D268D /* HomeController.swift */,
+				472E2B37241349F300B96CDC /* CategoryVC.swift */,
+				472E2B3924134A4700B96CDC /* ProfileVC.swift */,
+				472E2B3B2413552700B96CDC /* AddItemVC.swift */,
+				472E2B3D241355BF00B96CDC /* ChatVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,11 +272,15 @@
 			files = (
 				47F1E558240CAB37003B8117 /* SignUpController.swift in Sources */,
 				47F1E55A240CB717003B8117 /* AuthButton.swift in Sources */,
+				472E2B38241349F300B96CDC /* CategoryVC.swift in Sources */,
+				472E2B3C2413552700B96CDC /* AddItemVC.swift in Sources */,
 				47C6272224133CA2003D268D /* HomeController.swift in Sources */,
+				472E2B3E241355BF00B96CDC /* ChatVC.swift in Sources */,
 				47F1E53A240B31BA003B8117 /* AppDelegate.swift in Sources */,
 				47F1E554240B33AC003B8117 /* LoginController.swift in Sources */,
 				47F1E53C240B31BA003B8117 /* SceneDelegate.swift in Sources */,
 				47F1E556240B4C2E003B8117 /* Extensions.swift in Sources */,
+				472E2B3A24134A4700B96CDC /* ProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,9 +21,9 @@ class HomeController: UIViewController {
         checkIfUserIsLoggedIn()
         view.backgroundColor = .red
 //        signOut()
-    
+        
+        
     }
-    
     
     //Mark: - API
     
@@ -36,7 +36,7 @@ class HomeController: UIViewController {
             }
         }else {
            
-            print("DEBUG: User id is \(Auth.auth().currentUser?.uid)...")
+            print("DEBUG: User id is \(String(describing: Auth.auth().currentUser?.uid))...")
         }
     }
     

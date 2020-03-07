@@ -12,7 +12,7 @@ import Firebase
 class AddItemVC: UIViewController {
     
     override func viewDidLoad() {
-           view.backgroundColor = .systemGray
+           view.backgroundColor = .systemOrange
     }
     
 }

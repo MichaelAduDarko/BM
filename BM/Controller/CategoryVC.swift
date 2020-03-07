@@ -12,7 +12,8 @@ import Firebase
 class CategoryVc: UIViewController {
     
     override func viewDidLoad() {
-           view.backgroundColor = .systemPink
+           view.backgroundColor = .systemGreen
+        
     }
     
 }

@@ -12,7 +12,7 @@ import Firebase
 class ProfileVc: UIViewController {
     
     override func viewDidLoad() {
-           view.backgroundColor = .systemBlue
+           view.backgroundColor = .systemTeal
     }
     
 }

@@ -125,9 +125,9 @@
 				47F1E557240CAB37003B8117 /* SignUpController.swift */,
 				47C6272124133C9F003D268D /* HomeController.swift */,
 				472E2B37241349F300B96CDC /* CategoryVC.swift */,
-				472E2B3924134A4700B96CDC /* ProfileVC.swift */,
 				472E2B3B2413552700B96CDC /* AddItemVC.swift */,
 				472E2B3D241355BF00B96CDC /* ChatVC.swift */,
+				472E2B3924134A4700B96CDC /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

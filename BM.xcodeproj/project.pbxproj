@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		474412A6240F5FD80041F830 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 474412A5240F5FD70041F830 /* GoogleService-Info.plist */; };
+		47C6272224133CA2003D268D /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C6272124133C9F003D268D /* HomeController.swift */; };
 		47F1E53A240B31BA003B8117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F1E539240B31BA003B8117 /* AppDelegate.swift */; };
 		47F1E53C240B31BA003B8117 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F1E53B240B31BA003B8117 /* SceneDelegate.swift */; };
 		47F1E543240B31C1003B8117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47F1E542240B31C1003B8117 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		474412A5240F5FD70041F830 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		47C6272124133C9F003D268D /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		47F1E536240B31BA003B8117 /* BM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F1E539240B31BA003B8117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F1E53B240B31BA003B8117 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +56,6 @@
 				8902C2F67CB419FBB91F3B60 /* Pods-BM.debug.xcconfig */,
 				E04E6C60838551455B9F6BF7 /* Pods-BM.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -114,6 +115,7 @@
 			children = (
 				47F1E553240B33AC003B8117 /* LoginController.swift */,
 				47F1E557240CAB37003B8117 /* SignUpController.swift */,
+				47C6272124133C9F003D268D /* HomeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -258,6 +260,7 @@
 			files = (
 				47F1E558240CAB37003B8117 /* SignUpController.swift in Sources */,
 				47F1E55A240CB717003B8117 /* AuthButton.swift in Sources */,
+				47C6272224133CA2003D268D /* HomeController.swift in Sources */,
 				47F1E53A240B31BA003B8117 /* AppDelegate.swift in Sources */,
 				47F1E554240B33AC003B8117 /* LoginController.swift in Sources */,
 				47F1E53C240B31BA003B8117 /* SceneDelegate.swift in Sources */,

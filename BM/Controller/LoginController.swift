@@ -89,7 +89,7 @@ class LoginController: UIViewController {
                 return
             }
             
-            print("Succefully loged in ...")
+            self.dismiss(animated: true, completion: nil)
         }
         
     }

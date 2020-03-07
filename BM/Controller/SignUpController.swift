@@ -106,7 +106,8 @@ class SignUpController: UIViewController {
             
             Database.database().reference().child("users").child(uid).updateChildValues(values,
             withCompletionBlock: { (error, ref) in
-                print("Successfully registered user and saved data....")
+                
+                self.dismiss(animated: true, completion: nil)
                 
             })
         }

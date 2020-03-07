@@ -19,16 +19,13 @@ class HomeController: UIViewController {
     
     //Mark: - Lifecycle
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfUserIsLoggedIn()
 //        signOut()
         tabBarController()
         UINavigationBar.appearance().tintColor = .white
-        
-        
-        
+       
         
     }
     
@@ -61,7 +58,7 @@ class HomeController: UIViewController {
 //        tabBarC.tabBar.barStyle = .blackOpaque
         UITabBar.appearance().tintColor = .systemPink
         tabBarC.viewControllers = [createCategoryNC(), createAddItemNC(), createChatNC(),
-                                   createProfileNC()]
+                                           createProfileNC()]
         
         
         self.view.addSubview(tabBarC.view)
@@ -69,6 +66,7 @@ class HomeController: UIViewController {
     }
     
     func createCategoryNC() -> UINavigationController {
+         
            let categoryVc = CategoryVc()
            categoryVc.title = "Category"
            categoryVc.tabBarItem = UITabBarItem.init(title: "Category", image: #imageLiteral(resourceName: "category"), tag: 0)
@@ -78,8 +76,8 @@ class HomeController: UIViewController {
     
     func createAddItemNC() -> UINavigationController {
             let addItemVc = AddItemVC()
-            addItemVc.title = "AddItem"
-        addItemVc.tabBarItem = UITabBarItem.init(title: "AddItem", image: #imageLiteral(resourceName: "addItem"), tag: 1)
+            addItemVc.title = "Add Item"
+            addItemVc.tabBarItem = UITabBarItem.init(title: "Add Item", image: #imageLiteral(resourceName: "addItem"), tag: 1)
         
         return UINavigationController(rootViewController: addItemVc)
        }
@@ -87,18 +85,19 @@ class HomeController: UIViewController {
     func createChatNC() -> UINavigationController {
                 let chatVc = ChatVC()
                  chatVc.title = "Chat"
-        chatVc.tabBarItem = UITabBarItem.init(title: "Chat", image: #imageLiteral(resourceName: "chat"), tag: 2)
+                 chatVc.tabBarItem = UITabBarItem.init(title: "Chat", image: #imageLiteral(resourceName: "chat"), tag: 2)
         return UINavigationController(rootViewController: chatVc)
     }
     
     func createProfileNC() -> UINavigationController {
             let profileVc = ProfileVc()
             profileVc.title = "Profile"
-        profileVc.tabBarItem = UITabBarItem.init(title: "Profile", image: #imageLiteral(resourceName: "profile"), tag: 3)
-
-        
+            profileVc.tabBarItem = UITabBarItem.init(title: "Profile", image: #imageLiteral(resourceName: "profile"), tag: 3)
         return UINavigationController(rootViewController: profileVc)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
 }

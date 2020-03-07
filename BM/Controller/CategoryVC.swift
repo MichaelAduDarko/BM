@@ -12,8 +12,16 @@ import Firebase
 class CategoryVc: UIViewController {
     
     override func viewDidLoad() {
-           view.backgroundColor = .systemGreen
+        configureCategoryVC()
+       
+    }
+    
+    func configureCategoryVC(){
+         view.backgroundColor = .backgroundColor
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.prefersLargeTitles = true
         
     }
     
+   
 }

@@ -12,8 +12,17 @@ import Firebase
 class AddItemVC: UIViewController {
     
     override func viewDidLoad() {
-           view.backgroundColor = .systemOrange
+        
+        view.backgroundColor = .systemOrange
+        configureAddItemVC()
+//        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    func configureAddItemVC(){
+         view.backgroundColor = .backgroundColor
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+    }
 }
 

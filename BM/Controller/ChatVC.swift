@@ -13,6 +13,14 @@ class ChatVC: UIViewController {
     
     override func viewDidLoad() {
            view.backgroundColor = .systemBlue
+            configureChatVC()
+    }
+    
+    func configureChatVC(){
+         view.backgroundColor = .backgroundColor
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     
 }

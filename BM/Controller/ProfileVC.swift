@@ -13,6 +13,15 @@ class ProfileVc: UIViewController {
     
     override func viewDidLoad() {
            view.backgroundColor = .systemTeal
+            configurProfileVC()
     }
+    
+    func configurProfileVC(){
+            view.backgroundColor = .backgroundColor
+           navigationController?.navigationBar.barStyle = .black
+           navigationController?.navigationBar.prefersLargeTitles = true
+           
+       }
+    
     
 }

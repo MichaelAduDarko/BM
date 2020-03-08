@@ -25,7 +25,7 @@ class HomeController: UIViewController {
 //        signOut()
         tabBarController()
         UINavigationBar.appearance().tintColor = .white
-       
+ 
         
     }
     
@@ -55,19 +55,22 @@ class HomeController: UIViewController {
     func tabBarController() {
         tabBarC = UITabBarController()
        
-//        tabBarC.tabBar.barStyle = .blackOpaque
+
+        tabBarC.tabBar.barTintColor = UIColor.black
+        tabBarC.tabBar.tintColor = UIColor.white
         UITabBar.appearance().tintColor = .systemPink
+    
         tabBarC.viewControllers = [createCategoryNC(), createAddItemNC(), createChatNC(),
                                            createProfileNC()]
         
-        
+       
         self.view.addSubview(tabBarC.view)
      
     }
     
     func createCategoryNC() -> UINavigationController {
-         
-           let categoryVc = CategoryVc()
+        
+            let categoryVc = CategoryVc()
            categoryVc.title = "Category"
            categoryVc.tabBarItem = UITabBarItem.init(title: "Category", image: #imageLiteral(resourceName: "category"), tag: 0)
         return UINavigationController(rootViewController: categoryVc)

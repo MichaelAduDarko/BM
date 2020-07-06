@@ -60,21 +60,22 @@ class HomeController: UIViewController {
         tabBarC.tabBar.tintColor = UIColor.white
         UITabBar.appearance().tintColor = .systemPink
     
-        tabBarC.viewControllers = [createFeedNC(),createCategoryNC(), createAddItemNC(), createChatNC(),
-                                           createProfileNC()]
+        tabBarC.viewControllers = [createCategoryNC(), createAddItemNC(),
+                                   createChatNC()]
+                                           
         
        
         self.view.addSubview(tabBarC.view)
      
     }
     
-    func createFeedNC() -> UINavigationController {
-        
-            let feedVc = FeedVC()
-           feedVc.title = "Feed"
-           feedVc.tabBarItem = UITabBarItem.init(title: "Feed", image: #imageLiteral(resourceName: "feed"), tag: 0)
-        return UINavigationController(rootViewController: feedVc)
-    }
+//    func createFeedNC() -> UINavigationController {
+//
+//            let feedVc = FeedVC()
+//           feedVc.title = "Feed"
+//           feedVc.tabBarItem = UITabBarItem.init(title: "Feed", image: #imageLiteral(resourceName: "feed"), tag: 0)
+//        return UINavigationController(rootViewController: feedVc)
+//    }
     
     func createCategoryNC() -> UINavigationController {
         
@@ -100,12 +101,12 @@ class HomeController: UIViewController {
         return UINavigationController(rootViewController: chatVc)
     }
     
-    func createProfileNC() -> UINavigationController {
-            let profileVc = ProfileVc()
-            profileVc.title = "Profile"
-            profileVc.tabBarItem = UITabBarItem.init(title: "Profile", image: #imageLiteral(resourceName: "profile"), tag: 4)
-        return UINavigationController(rootViewController: profileVc)
-    }
+//    func createProfileNC() -> UINavigationController {
+//            let profileVc = ProfileVc()
+//            profileVc.title = "Profile"
+//            profileVc.tabBarItem = UITabBarItem.init(title: "Profile", image: #imageLiteral(resourceName: "profile"), tag: 4)
+//        return UINavigationController(rootViewController: profileVc)
+//    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

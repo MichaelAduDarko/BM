@@ -27,6 +27,7 @@ class CategoryVc: UIViewController {
     override func viewDidLoad() {
         configureCategoryVC()
         searchController()
+        profile()
         view.addSubview(collectionView)
         
         collectionView.backgroundColor = .backgroundColor
@@ -48,10 +49,33 @@ class CategoryVc: UIViewController {
         //        navigationController?.navigationBar.backgroundColor = .black
     }
     
+    //MARK:- Selectors
+    @objc func showProfile(){
+        let contoller = ProfileVc()
+//        contoller.delegate = self
+        let nav = UINavigationController(rootViewController: contoller)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true, completion: nil)
+        
+    }
+    
+    
+    //MARK:- Helpers
+    
+    func profile (){
+        view.backgroundColor = .white
+        let image = UIImage(systemName: "person.circle.fill" )
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showProfile))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.white
+        
+    }
+    
     private func searchController(){
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
+    
     }
 }
 

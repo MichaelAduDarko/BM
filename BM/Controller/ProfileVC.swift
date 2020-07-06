@@ -4,8 +4,7 @@
 //
 //  Created by MICHAEL ADU DARKO on 3/6/20.
 //  Copyright © 2020 Bronzy. All rights reserved.
-//
-g
+
 import UIKit
 import Firebase
 

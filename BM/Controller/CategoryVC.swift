@@ -25,12 +25,12 @@ class CategoryVc: UIViewController {
     }()
     
     override func viewDidLoad() {
-        configureCategoryVC()
-        searchController()
-        profile()
+//        configureUI()
+      
         view.addSubview(collectionView)
+       
         
-        collectionView.backgroundColor = .backgroundColor
+        collectionView.backgroundColor = #colorLiteral(red: 0.8802615509, green: 0.8898189983, blue: 0.9010152284, alpha: 0.9514126712)
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
@@ -42,41 +42,18 @@ class CategoryVc: UIViewController {
         collectionView.register(CategoryCell.self, forCellWithReuseIdentifier: "cell")
     }
     
-    func configureCategoryVC(){
-        view.backgroundColor = .backgroundColor
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.prefersLargeTitles = true
-        //        navigationController?.navigationBar.backgroundColor = .black
-    }
+ 
     
     //MARK:- Selectors
-    @objc func showProfile(){
-        let contoller = ProfileVc()
-//        contoller.delegate = self
-        let nav = UINavigationController(rootViewController: contoller)
-        nav.modalPresentationStyle = .fullScreen
-        present(nav, animated: true, completion: nil)
-        
-    }
+
     
     
     //MARK:- Helpers
     
-    func profile (){
-        view.backgroundColor = .white
-        let image = UIImage(systemName: "person.circle.fill" )
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showProfile))
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.white
-        
-    }
     
-    private func searchController(){
-        let searchController = UISearchController(searchResultsController: nil)
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = true
     
-    }
+    
+    
 }
 
 extension CategoryVc: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
@@ -91,6 +68,11 @@ extension CategoryVc: UICollectionViewDelegateFlowLayout, UICollectionViewDataSo
         return data.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let categoryDetail = DetailViewController()
+        self.navigationController?.pushViewController(categoryDetail, animated: true)
+        
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)

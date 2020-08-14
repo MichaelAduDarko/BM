@@ -19,9 +19,8 @@ class AddItemVC: UIViewController {
     }
     
     func configureAddItemVC(){
-         view.backgroundColor = .backgroundColor
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.prefersLargeTitles = true
+         view.backgroundColor = .white
+        
         
     }
 }

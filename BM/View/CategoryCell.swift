@@ -24,14 +24,14 @@ class CategoryCell: UICollectionViewCell {
     
     
     func setCellShadow(){
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 1)
-        self.layer.shadowOpacity = 1
-        self.layer.shadowRadius = 1
+        self.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        self.layer.shadowOffset = CGSize(width: 2, height: 1)
+        self.layer.shadowOpacity = 2
+        self.layer.shadowRadius = 2
         self.layer.masksToBounds = false
         self.clipsToBounds = false
         self.layer.cornerRadius = 10
-        backgroundColor = .red
+        backgroundColor = #colorLiteral(red: 1, green: 0.3563321998, blue: 0.2494430361, alpha: 1)
     }
     
     func setUp(){
@@ -45,7 +45,7 @@ class CategoryCell: UICollectionViewCell {
             categoryIVLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
             categoryIVLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             categoryIVLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            categoryIVLabel.heightAnchor.constraint(equalToConstant: 25)
+            categoryIVLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
         
         NSLayoutConstraint.activate([
@@ -79,8 +79,7 @@ class CategoryCell: UICollectionViewCell {
     
     let categoryIVLabel : UILabel = {
         let label = UILabel()
-        label.text = "Name"
-        label.textColor = UIColor.white
+        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 21)
         label.textAlignment = .center

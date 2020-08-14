@@ -11,9 +11,9 @@ import Firebase
 
 class HomeController: UIViewController {
     
-
+    
     //Mark:- Properties
-        var tabBarC: UITabBarController!
+    var tabBarC: UITabBarController!
     
     
     
@@ -22,10 +22,10 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfUserIsLoggedIn()
-//        signOut()
+//                signOut()
         tabBarController()
-        UINavigationBar.appearance().tintColor = .black
- 
+        UINavigationBar.appearance().tintColor = .white
+        
         
     }
     
@@ -34,12 +34,12 @@ class HomeController: UIViewController {
     func checkIfUserIsLoggedIn() {
         if Auth.auth().currentUser?.uid == nil {
             DispatchQueue.main.async {
-            let nav = UINavigationController(rootViewController: LoginController())
-            nav.modalPresentationStyle = .fullScreen
-            self.present(nav, animated: true, completion: nil)
+                let nav = UINavigationController(rootViewController: LoginController())
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
             }
         }else {
-           
+            
             print("DEBUG: User id is \(String(describing: Auth.auth().currentUser?.uid))...")
         }
     }
@@ -54,59 +54,54 @@ class HomeController: UIViewController {
     
     func tabBarController() {
         tabBarC = UITabBarController()
-       
-
-        tabBarC.tabBar.barTintColor = UIColor.black
-        tabBarC.tabBar.tintColor = UIColor.white
         UITabBar.appearance().tintColor = .systemPink
-    
-        tabBarC.viewControllers = [createCategoryNC(), createAddItemNC(),
-                                   createChatNC()]
-                                           
         
-       
+        tabBarC.viewControllers = [createFeedNC(),createCategoryNC(), createAddItemNC(),
+                                   createChatNC(), createProfileNC()]
+        
+        
         self.view.addSubview(tabBarC.view)
-     
+        
     }
     
-//    func createFeedNC() -> UINavigationController {
-//
-//            let feedVc = FeedVC()
-//           feedVc.title = "Feed"
-//           feedVc.tabBarItem = UITabBarItem.init(title: "Feed", image: #imageLiteral(resourceName: "feed"), tag: 0)
-//        return UINavigationController(rootViewController: feedVc)
-//    }
+    func createFeedNC() -> UINavigationController {
+        
+        let feedVc = FeedVC()
+        feedVc.title = "Feed"
+        feedVc.tabBarItem = UITabBarItem.init(title: "Feed", image: #imageLiteral(resourceName: "feed"), tag: 0)
+        return UINavigationController(rootViewController: feedVc)
+    }
     
     func createCategoryNC() -> UINavigationController {
         
-            let categoryVc = CategoryVc()
-           categoryVc.title = "Category"
-           categoryVc.tabBarItem = UITabBarItem.init(title: "Category", image: #imageLiteral(resourceName: "category"), tag: 1)
+        let categoryVc = CategoryVc()
+        categoryVc.title = "Category"
+        categoryVc.tabBarItem = UITabBarItem.init(title: "Category", image: #imageLiteral(resourceName: "category"), tag: 1)
         return UINavigationController(rootViewController: categoryVc)
     }
     
     
     func createAddItemNC() -> UINavigationController {
-            let addItemVc = AddItemVC()
-            addItemVc.title = "Add Item"
-            addItemVc.tabBarItem = UITabBarItem.init(title: "Add Item", image: #imageLiteral(resourceName: "addItem"), tag: 2)
+        let addItemVc = AddItemVC()
+        addItemVc.title = "Add Item"
+        addItemVc.tabBarItem = UITabBarItem.init(title: "Add Item", image: #imageLiteral(resourceName: "addItem"), tag: 2)
         
         return UINavigationController(rootViewController: addItemVc)
-       }
+    }
     
     func createChatNC() -> UINavigationController {
-                let chatVc = ChatVC()
-                 chatVc.title = "Chat"
-                 chatVc.tabBarItem = UITabBarItem.init(title: "Chat", image: #imageLiteral(resourceName: "chat"), tag: 3)
+        let chatVc = ChatVC()
+        chatVc.title = "Chat"
+        chatVc.tabBarItem = UITabBarItem.init(title: "Chat", image: #imageLiteral(resourceName: "chat"), tag: 3)
         return UINavigationController(rootViewController: chatVc)
     }
     
-//    func createProfileNC() -> UINavigationController {
-//            let profileVc = ProfileVc()
-//            profileVc.title = "Profile"
-//            profileVc.tabBarItem = UITabBarItem.init(title: "Profile", image: #imageLiteral(resourceName: "profile"), tag: 4)
-//        return UINavigationController(rootViewController: profileVc)
-//    }
+        func createProfileNC() -> UINavigationController {
+            let profileVc = ProfileVc()
+            profileVc.title = "Profile"
+            profileVc.tabBarItem = UITabBarItem.init(title: "Profile", image: #imageLiteral(resourceName: "profile"), tag: 4)
+            return UINavigationController(rootViewController: profileVc)
+        }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

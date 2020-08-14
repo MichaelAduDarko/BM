@@ -12,14 +12,12 @@ import Firebase
 class ChatVC: UIViewController {
     
     override func viewDidLoad() {
-           view.backgroundColor = .systemBlue
             configureChatVC()
     }
     
     func configureChatVC(){
-         view.backgroundColor = .backgroundColor
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.prefersLargeTitles = true
+         view.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+        
         
     }
     
